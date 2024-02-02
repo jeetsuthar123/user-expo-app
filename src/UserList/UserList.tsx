@@ -55,8 +55,7 @@ type ItemData = {
         "avatar": "https://reqres.in/img/faces/12-image.jpg"
     }
 ]
-
-  
+ 
 const UserList = () => {
     const [searchTerm, setSearchTerm] = useState('');
     return (
@@ -67,11 +66,10 @@ const UserList = () => {
           placeHolder="Search a user"
           />
           <FlatList
-          style= {userListStyle.container}
           data={DATA}
           keyExtractor={( item )=>item?.id.toString()}
           renderItem={({item})=>
-           ( <Text>Testing</Text>)
+           ( <Text>{item.id}</Text>)
           }
           />
         </View>
