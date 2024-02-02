@@ -3,21 +3,42 @@ import Colors from "../Utils/Color";
 
 const userItemStyle = StyleSheet.create({
     mainContainer : {
-        flex : 1,
-        backgroundColor : Colors.white,
-        paddingVertical : 22
+        flexDirection : 'row',
+        alignItems : 'center',
+        paddingHorizontal : 20
     },
     userImage : {
-        paddingVertical : 10 
+        height : 90,
+        width : 90,
+        borderRadius : 90/2,
+        paddingVertical : 10 ,
+        zIndex : 1,
+        marginLeft: 10,
+        marginTop : 10,
+        marginRight : -50,
     },
     userInfoView : {
-        paddingVertical : 10 
+        flex : 1,
+        borderRadius : 25,
+        marginRight : 10,
+        paddingHorizontal : 25,
+        marginTop: 10,
+        paddingVertical : 20 ,
+        paddingLeft : 50,
+        backgroundColor : Colors.white,
     },
     userName : {
-        paddingVertical : 10 
+        fontSize : 12,
+        fontWeight : '500',
+        color : Colors.Jet_Black,
+        paddingBottom : 10
+
     },
     userEmail : {
-        paddingVertical : 10 
+        fontSize : 12,
+        fontWeight : '500',
+        color : Colors.Jet_Black,
+       
     },
 })
 

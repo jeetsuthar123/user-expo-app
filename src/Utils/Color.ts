@@ -7,6 +7,7 @@ const Colors = {
     red : 'rgb(255,0,0)',
     white : 'rgb(255,255,255)',
     input_color : '#424242',
+    levendra_mist : '#E6E6FA'
 }
 
 export default Colors;

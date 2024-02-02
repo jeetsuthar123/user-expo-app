@@ -16,13 +16,13 @@ type userItemProps = {
 const UserItem = ({item}: userItemProps ) => {
     return (
         <View style = {userItemStyle.mainContainer}>
-            <Image style = {userItemStyle.userImage} source={{uri : item?.avatar}}/>
+               <Image style = {userItemStyle.userImage} source={{uri : item?.avatar}}/>
+           
             <View style = {userItemStyle.userInfoView}>
                 <Text style = {userItemStyle.userName} > {item?.first_name}{" "}{item?.last_name}</Text>
                 <Text style = {userItemStyle.userEmail} > {item?.email}</Text>
-
+             
             </View>
-
         </View>
     )
 

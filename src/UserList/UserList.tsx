@@ -67,6 +67,7 @@ const UserList = () => {
           placeHolder="Search a user"
           />
           <FlatList
+          style = {userListStyle.userList}
           data={DATA}
           keyExtractor={( item )=>item?.id.toString()}
           renderItem={({item})=>
