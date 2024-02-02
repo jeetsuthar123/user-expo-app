@@ -2,6 +2,7 @@ import { Text, View , FlatList} from "react-native";
 import userListStyle from "./UserList.style";
 import { useState } from "react";
 import SearchBar from "../Components/SearchBar/SearchBar";
+import UserItem from "./UserItem";
 
 type ItemData = {
     id: number;
@@ -69,7 +70,7 @@ const UserList = () => {
           data={DATA}
           keyExtractor={( item )=>item?.id.toString()}
           renderItem={({item})=>
-           ( <Text>{item.id}</Text>)
+           ( <UserItem item={item}/>)
           }
           />
         </View>
