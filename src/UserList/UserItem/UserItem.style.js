@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import Colors from "../Utils/Color";
+import Colors from "../../Utils/Color";
 
 const userItemStyle = StyleSheet.create({
     mainContainer : {
@@ -24,8 +24,9 @@ const userItemStyle = StyleSheet.create({
         paddingHorizontal : 25,
         marginTop: 10,
         paddingVertical : 20 ,
-        paddingLeft : 50,
+        paddingLeft : 70,
         backgroundColor : Colors.white,
+
     },
     userName : {
         fontSize : 12,
@@ -38,7 +39,7 @@ const userItemStyle = StyleSheet.create({
         fontSize : 12,
         fontWeight : '500',
         color : Colors.Jet_Black,
-       
+
     },
 })
 
