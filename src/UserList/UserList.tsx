@@ -3,6 +3,7 @@ import userListStyle from "./UserList.style";
 import { useState } from "react";
 import SearchBar from "../Components/SearchBar/SearchBar";
 import UserItem from "./UserItem/UserItem";
+import { useGetUsersQuery } from "../ApiSlices/userApiSlice";
 
 type ItemData = {
   id: number;
@@ -57,6 +58,16 @@ const DATA: ItemData[] = [
   },
 ];
 
+const {
+  data: response,
+  isError,
+  isFetching,
+  isLoading,
+  isSuccess,
+  error,
+  refetch,
+} = useGetUsersQuery({});
+
 const UserList = () => {
   const [searchTerm, setSearchTerm] = useState("");
   return (
@@ -68,9 +79,12 @@ const UserList = () => {
       />
       <FlatList
         style={userListStyle.userList}
-        data={DATA}
+        data={response?.data}
         keyExtractor={(item) => item?.id.toString()}
         renderItem={({ item }) => <UserItem item={item} />}
+        onRefresh={refetch}
+        refreshing={isFetching}
+        testID="user-list"
       />
     </View>
   );
